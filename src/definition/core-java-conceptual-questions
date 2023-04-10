@@ -50,7 +50,7 @@ A. The main method.
 Why main is static?
 A. So JVM can invoke it without instantiating the class. JVM looks for this method signature to execute the Java program.
 
-Which class is the superclass of all classes?
+    Which class is the superclass of all classes?
 is Object class
 
 What is difference between path and classpath variables?
