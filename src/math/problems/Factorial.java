@@ -1,5 +1,7 @@
 package math.problems;
 
+import org.junit.Assert;
+
 public class Factorial {
 
     public static void main(String[] args) {
@@ -8,6 +10,15 @@ public class Factorial {
          * Write a java program to find Factorial of a given number using Recursion as well as Iteration.
          *
          */
+        int num = 5;
+        long factorial = 1;
+        for (int i = 1; i <= num; ++i) {
+            // factorial = factorial * i;
+            factorial *= i;
+        }
+        System.out.printf("Factorial of %d = %d", num, factorial);
 
-    }
-}
+
+}}
+
+

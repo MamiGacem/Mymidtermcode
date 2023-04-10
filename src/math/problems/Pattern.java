@@ -8,8 +8,37 @@ public class Pattern {
 		 *
 		 *
 		 */
+		int n=100;
+		//decrement n by 1 upto 90( i.e for 10 numbers 100-90)
+		while(n!=90)
+		{
+			System.out.print(n+",");
+			n=n-1;
+		}
+		//decrement n by 2 upto 70( i.e for 20 numbers 90-70)
+		while(n!=70)
+		{
+			System.out.print(n+",");
+			n=n-2;
+		}
+		//decrement n by 3 upto 40( i.e for 30 numbers 70-40)
+		while(n!=40)
+		{
+			System.out.print(n+",");
+			n=n-3;
+		}
+		//decrement n by 4 upto 0( i.e for 40 numbers 40-0)
+		while(n!=0)
+		{
+			System.out.print(n+",");
+			n=n-4;
+		}
+		// (n==0)
+		System.out.print(n);
+	}
+}
+
 		
 
 
-	}
-}
+

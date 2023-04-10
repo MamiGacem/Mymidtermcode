@@ -7,5 +7,23 @@ public class Palindrome {
           Palindrome. So write java code to check if a given String is Palindrome or not.
          */
 
+        String name="Madam";
+        // create an object for string buffer class
+        StringBuffer sb=new StringBuffer(name);
+        // declear revers method
+        sb.reverse();
+        // create another variable for comparing
+        String name2=sb.toString();
+        // validatating both words
+        if(name.equalsIgnoreCase(name2)) { // before Ignorecase it was not palindrooe
+            System.out.println("this is a palindroome..");
+        }else {
+            System.out.println("this is not a palindroome!!!");
+
+        }
     }
+
+
+
 }
+
