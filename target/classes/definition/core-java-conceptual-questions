@@ -113,7 +113,7 @@ used in Java to ensure that a sectionof code is always executed, even if an exce
 in Java used to perform cleanup processing on an object before it is garbage collected.
 
 What is a constructor ?
-A. Special type of method that is used to initialize the state of an object in a class.
+a constructor  Special type of method that is used to initialize the state of an object in a class.
 
 Can we have multiple constructors in a class?
 A. Yes.

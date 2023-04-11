@@ -7,13 +7,14 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
 public class LowestNumber {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
 		/*
 		 * Write java solution to find the lowest number from this array.
 		 * Use one of the databases from mysql or mongodb to store and to retrieve.
@@ -33,6 +34,22 @@ public class LowestNumber {
 
 
 		ConnectToSqlDB connectToSqlDB = new ConnectToSqlDB();
+		Properties prop = new Properties();
+		try {
+			InputStream inputStream = new FileInputStream("C:\\Users\\Amel Boucetta Gacem\\eclipse-workspace\\midterm-coding-exam\\src\\secret.properties");
+			prop.load(inputStream);
+			inputStream.close();
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
+		String driverClass = prop.getProperty("MYSQLJDBC.driver");
+		String url = prop.getProperty("MYSQLJDBC.url");
+		String username = prop.getProperty("MYSQLJDBC.userName");
+		String password = prop.getProperty("MYSQLJDBC.password");
+
+		Class.forName(driverClass);
+		Connection connection = DriverManager.getConnection(url,username,password);
+
 
 // Insert the lowest number into a MySQL table
 		connectToSqlDB.insertDataToSqlTable(Integer.toString(lowestNumber), "students", "stName");
