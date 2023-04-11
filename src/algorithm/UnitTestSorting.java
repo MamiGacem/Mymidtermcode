@@ -64,7 +64,9 @@ public class UnitTestSorting {
             Assert.assertArrayEquals(sortedArray, unSortedArray);
         } catch (Exception ex) {
             ex.getMessage();
+
         }
+
     }}
 
 

@@ -4,8 +4,14 @@ import databases.ConnectToMongoDB;
 import databases.ConnectToSqlDB;
 import org.junit.Assert;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.sql.Connection;
+import java.sql.DriverManager;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Properties;
 import java.util.Random;
 
 public class Numbers {
@@ -26,12 +32,13 @@ public class Numbers {
 		storeRandomNumbers(num);
 		ConnectToSqlDB connectToSqlDB = new ConnectToSqlDB();
 
+
 		//Selection Sort
 		Sort algo = new Sort();
 		algo.selectionSort(num);
 		long selectionSortExecutionTime = algo.executionTime;
 		System.out.println("Total Execution Time of "+ num.length + " numbers in Selection Sort take: " + selectionSortExecutionTime + " milli sec");
-        connectToSqlDB.insertDataFromArrayToSqlTable(num, "selection_sort", "SortingNumbers");
+		connectToSqlDB.insertDataFromArrayToSqlTable(num, "selection_sort", "SortingNumbers");
         List<String> numbers = connectToSqlDB.readDataBase("selection_sort", "SortingNumbers");
         printValue(numbers);
 		int n = num.length;
@@ -133,13 +140,12 @@ public class Numbers {
 	}
 
 
-	public static void printValue(List<String> array){
-		for(String st:array){
+	public static void printValue(List<String> array) {
+		for (String st : array) {
 			System.out.println(st);
 		}
 		ConnectToSqlDB connectToSqlDB = new ConnectToSqlDB();
 
 		Assert.assertEquals("", "");
-
 	}
-}
+	}

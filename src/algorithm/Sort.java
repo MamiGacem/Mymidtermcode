@@ -41,15 +41,13 @@ public class Sort {
             int curr= j;
             int i = 0;
           //  j = i;
-            double[] a = new double[0];
-        /*    while(j>0 && curr<a[j-1]){
+            double[] a = new double[1];
+        /*   while(j>0 && curr<a[j-1]){
                 a[j]=a[j-1];
                 j--;
             }
-            a[j]=curr;*/
+          //  a[j]=curr;*/
         }
-
-
 
         final long endTime = System.currentTimeMillis();
         final long executionTime = endTime - startTime;
