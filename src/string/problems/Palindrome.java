@@ -16,9 +16,9 @@ public class Palindrome {
         String name2=sb.toString();
         // validatating both words
         if(name.equalsIgnoreCase(name2)) { // before Ignorecase it was not palindrooe
-            System.out.println("this is a palindroome..");
+            System.out.println("this is a palindroome ,test passed");
         }else {
-            System.out.println("this is not a palindroome!!!");
+            System.out.println("this is not a palindroome , test failed ");
 
         }
     }

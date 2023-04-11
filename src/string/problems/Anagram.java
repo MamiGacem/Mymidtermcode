@@ -22,10 +22,11 @@ public class Anagram {
         String s2 = new String(str2);
 
         if (s1.equals(s2)) {
-            System.out.println("Strings are anagram");
+            System.out.println("Strings are anagram so test pass ");
         } else {
-            System.out.println("Strings are not anagram");
+            System.out.println("Strings are not anagram so test failed");
         }
+
 
     }
 }
