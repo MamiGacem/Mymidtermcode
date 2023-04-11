@@ -36,11 +36,11 @@ public class EmployeeInfo implements Employee {
 	 * Must implement below constructor.
 	 */
 	public void EmployeeInfo(int employeeId) {
-
+         System.out.println("employee id");
 	}
 
 	public void EmployeeInfo(String name, int employeeId) {
-
+		System.out.println("employee name employee id ");
 	}
 
 	/*
@@ -68,17 +68,18 @@ public class EmployeeInfo implements Employee {
 
 	@Override
 	public void assignDepartment() {
-
+		System.out.println("employee to departments");
 	}
 
 	@Override
 	public int calculateSalary() {
+		System.out.println("employee salary");
 		return 0;
 	}
 
 	@Override
 	public void benefitLayout() {
-
+		System.out.println("employee benefit");
 	}
 
 	@Override
@@ -93,7 +94,6 @@ public class EmployeeInfo implements Employee {
 
 	@Override
 	public void setEmpName(String animal) {
-
 	}
 
 	@Override
